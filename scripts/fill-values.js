@@ -1,4 +1,5 @@
 const defaultsPath = "data/default_values.json";
+const localValuesPath = "data/values.local.json";
 const valuesPath = "data/values.json";
 
 async function readJson(path) {
@@ -97,13 +98,17 @@ async function initializePage() {
 	}
 
 	let values = {};
-	try {
-		values = await readJson(valuesPath);
-		if (!values || typeof values !== "object" || Array.isArray(values)) {
-			throw new Error(`${valuesPath} must contain a JSON object`);
+	for (const path of [localValuesPath, valuesPath]) {
+		try {
+			const candidate = await readJson(path);
+			if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) {
+				throw new Error(`${path} must contain a JSON object`);
+			}
+			values = candidate;
+			break;
+		} catch (error) {
+			console.info(`Could not use ${path}; trying the next values source.`, error);
 		}
-	} catch (error) {
-		console.warn("Using default page values because values.json is unavailable.", error);
 	}
 
 	renderValues(mergeValues(defaults, values));
