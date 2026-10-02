@@ -1,6 +1,30 @@
 const defaultsPath = "data/default_values.json";
 const localValuesPath = "data/values.local.json";
 const valuesPath = "data/values.json";
+const bundledDefaults = {
+	vs: "VS",
+	images: {
+		bob: "assets/icons/bob_logo.png",
+		opponent: "assets/icons/placeholder_logo.png",
+	},
+	info: {
+		eventName: "Event X",
+		groupName: "Gruppe X.X",
+		matchday: "Spieltag X",
+		castersNames: "Caster 1 & Caster 2",
+	},
+	headToHead: {
+		bob: { name: "BOMBA BARBIES", short: "BOB", wins: "0", losses: "0" },
+		opponent: { name: "Placeholder", short: "PLC", wins: "0", losses: "0" },
+	},
+	standings: Array.from({ length: 8 }, () => ({
+		image: "assets/icons/placeholder_logo.png",
+		short: "PLC",
+		name: "Placeholder",
+		wins: "0",
+		losses: "0",
+	})),
+};
 
 async function readJson(path) {
 	const response = await fetch(path, { cache: "no-store" });
@@ -88,26 +112,28 @@ function renderValues(data) {
 }
 
 async function initializePage() {
-	let defaults;
-
-	try {
-		defaults = await readJson(defaultsPath);
-	} catch (error) {
-		console.error("Unable to load default page values.", error);
-		return;
+	let defaults = bundledDefaults;
+	if (window.location.protocol !== "file:") {
+		try {
+			defaults = await readJson(defaultsPath);
+		} catch (error) {
+			console.warn("Using bundled defaults because default_values.json is unavailable.", error);
+		}
 	}
 
-	let values = {};
-	for (const path of [localValuesPath, valuesPath]) {
-		try {
-			const candidate = await readJson(path);
-			if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) {
-				throw new Error(`${path} must contain a JSON object`);
+	let values = window.PAGE_VALUES || {};
+	if (window.location.protocol !== "file:") {
+		for (const path of [localValuesPath, valuesPath]) {
+			try {
+				const candidate = await readJson(path);
+				if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) {
+					throw new Error(`${path} must contain a JSON object`);
+				}
+				values = mergeValues(values, candidate);
+				break;
+			} catch (error) {
+				console.info(`Could not use ${path}; trying the next values source.`, error);
 			}
-			values = candidate;
-			break;
-		} catch (error) {
-			console.info(`Could not use ${path}; trying the next values source.`, error);
 		}
 	}
 

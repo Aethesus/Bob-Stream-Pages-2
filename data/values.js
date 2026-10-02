@@ -1,4 +1,4 @@
-{
+window.PAGE_VALUES = {
 	"vs": "",
 	"images": {
 		"bob": "",
@@ -82,4 +82,4 @@
 			"losses": ""
 		}
 	]
-}
+};
