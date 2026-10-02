@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/createbg.js" defer></script>
+    <script src="scripts/text-resize.js" defer></script>
+    <script src="scripts/fill-values.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>BOB Stream Pages</title>
+</head>
+
+<body>
+    <canvas id="background"></canvas>
+    <div id="content">
+        <div class="panel" id="icons">
+            <img alt="" width="400px" height="400px" class="icon">
+            <p id="vs"></p>
+            <img alt="" width="400px" height="400px" class="icon">
+        </div>
+        <div class="panel" id="info">
+            <p id="info-eventname"></p>
+            <p id="info-groupname"></p>
+            <p id="info-matchday"></p>
+            <hr id="info-separator" class="separator">
+            <p id="info-casters-header">Cast:</p>
+            <p id="info-casters-names"></p>
+        </div>
+        <div class="panel" id="h2h">
+            <p class="h2h-name h2h-bob" id="h2h-bob-name"></p>
+            <p class="h2h-short h2h-bob" id="h2h-bob-short"></p>
+            <div class="h2h-winloss" id="h2h-bob-winloss">
+                <div class="h2h-winloss-box-green"></div>
+                <div class="h2h-winloss-box-red"></div>
+            </div>
+            <hr id="h2h-separator" class="separator">
+            <p class="h2h-name h2h-enemy" id="h2h-enemy-name"></p>
+            <p class="h2h-short h2h-enemy" id="h2h-enemy-short"></p>
+            <div class="h2h-winloss" id="h2h-enemy-winloss">
+                <div class="h2h-winloss-box-green"></div>
+                <div class="h2h-winloss-box-red"></div>
+            </div>
+        </div>
+        <div class="panel" id="table">
+            <p id="table-title">Tabelle</p>
+            <table id="table-list">
+                <tbody>
+                    <tr id="table-item-1" class="table-item">
+                        <td class="table-standing">1</td>
+                        <td class="table-icon-cell"><img alt="icon" width="50px" height="50px"
+                                class="table-icon"></td>
+                        <td class="table-short"></td>
+                        <td class="table-name"></td>
+                        <td class="table-winloss">
+                            <div class="table-winloss">
+                            <div class="table-winloss-wins"></div>
+                            <div class="table-winloss-losses"></div>
+                            </div>                            
+                        </td>
+                    </tr>
+                    <tr id="table-item-2" class="table-item">
+                        <td class="table-standing">2</td>
+                        <td class="table-icon-cell"><img alt="icon" width="50px" height="50px"
+                                class="table-icon"></td>
+                        <td class="table-short"></td>
+                        <td class="table-name"></td>
+                        <td class="table-winloss">
+                            <div class="table-winloss">
+                            <div class="table-winloss-wins"></div>
+                            <div class="table-winloss-losses"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="table-item-3" class="table-item">
+                        <td class="table-standing">3</td>
+                        <td class="table-icon-cell"><img alt="icon" width="50px" height="50px"
+                                class="table-icon"></td>
+                        <td class="table-short"></td>
+                        <td class="table-name"></td>
+                        <td class="table-winloss">
+                            <div class="table-winloss">
+                            <div class="table-winloss-wins"></div>
+                            <div class="table-winloss-losses"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="table-item-4" class="table-item">
+                        <td class="table-standing">4</td>
+                        <td class="table-icon-cell"><img alt="icon" width="50px" height="50px"
+                                class="table-icon"></td>
+                        <td class="table-short"></td>
+                        <td class="table-name"></td>
+                        <td class="table-winloss">
+                            <div class="table-winloss">
+                            <div class="table-winloss-wins"></div>
+                            <div class="table-winloss-losses"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="table-item-5" class="table-item">
+                        <td class="table-standing">5</td>
+                        <td class="table-icon-cell"><img alt="icon" width="50px" height="50px"
+                                class="table-icon"></td>
+                        <td class="table-short"></td>
+                        <td class="table-name"></td>
+                        <td class="table-winloss">
+                            <div class="table-winloss">
+                            <div class="table-winloss-wins"></div>
+                            <div class="table-winloss-losses"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="table-item-6" class="table-item">
+                        <td class="table-standing">6</td>
+                        <td class="table-icon-cell"><img alt="icon" width="50px" height="50px"
+                                class="table-icon"></td>
+                        <td class="table-short"></td>
+                        <td class="table-name"></td>
+                        <td class="table-winloss">
+                            <div class="table-winloss">
+                            <div class="table-winloss-wins"></div>
+                            <div class="table-winloss-losses"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="table-item-7" class="table-item">
+                        <td class="table-standing">7</td>
+                        <td class="table-icon-cell"><img alt="icon" width="50px" height="50px"
+                                class="table-icon"></td>
+                        <td class="table-short"></td>
+                        <td class="table-name"></td>
+                        <td class="table-winloss">
+                            <div class="table-winloss">
+                            <div class="table-winloss-wins"></div>
+                            <div class="table-winloss-losses"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="table-item-8" class="table-item">
+                        <td class="table-standing">8</td>
+                        <td class="table-icon-cell"><img alt="icon" width="50px" height="50px"
+                                class="table-icon"></td>
+                        <td class="table-short"></td>
+                        <td class="table-name"></td>
+                        <td class="table-winloss">
+                            <div class="table-winloss">
+                            <div class="table-winloss-wins"></div>
+                            <div class="table-winloss-losses"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

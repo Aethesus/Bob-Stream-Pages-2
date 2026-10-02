@@ -1,0 +1,85 @@
+{
+	"vs": "VS",
+	"images": {
+		"bob": "assets/icons/bob_logo.png",
+		"opponent": "assets/icons/placeholder_logo.png"
+	},
+	"info": {
+		"eventName": "Event X",
+		"groupName": "Gruppe X.X",
+		"matchday": "Spieltag X",
+		"castersNames": "Caster 1 & Caster 2"
+	},
+	"headToHead": {
+		"bob": {
+			"name": "BOMBA BARBIES",
+			"short": "BOB",
+			"wins": "0",
+			"losses": "0"
+		},
+		"opponent": {
+			"name": "Placeholder",
+			"short": "PLC",
+			"wins": "0",
+			"losses": "0"
+		}
+	},
+	"standings": [
+		{
+			"image": "assets/icons/placeholder_logo.png",
+			"short": "PLC",
+			"name": "Placeholder",
+			"wins": "0",
+			"losses": "0"
+		},
+		{
+			"image": "assets/icons/placeholder_logo.png",
+			"short": "PLC",
+			"name": "Placeholder",
+			"wins": "0",
+			"losses": "0"
+		},
+		{
+			"image": "assets/icons/placeholder_logo.png",
+			"short": "PLC",
+			"name": "Placeholder",
+			"wins": "0",
+			"losses": "0"
+		},
+		{
+			"image": "assets/icons/placeholder_logo.png",
+			"short": "PLC",
+			"name": "Placeholder",
+			"wins": "0",
+			"losses": "0"
+		},
+		{
+			"image": "assets/icons/placeholder_logo.png",
+			"short": "PLC",
+			"name": "Placeholder",
+			"wins": "0",
+			"losses": "0"
+		},
+		{
+			"image": "assets/icons/placeholder_logo.png",
+			"short": "PLC",
+			"name": "Placeholder",
+			"wins": "0",
+			"losses": "0"
+		},
+		{
+			"image": "assets/icons/placeholder_logo.png",
+			"short": "PLC",
+			"name": "Placeholder",
+			"wins": "0",
+			"losses": "0"
+		},
+		{
+			"image": "assets/icons/placeholder_logo.png",
+			"short": "PLC",
+			"name": "Placeholder",
+			"wins": "0",
+			"losses": "0"
+		}
+	]
+}
