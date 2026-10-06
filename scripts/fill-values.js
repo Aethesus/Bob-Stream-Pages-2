@@ -103,6 +103,12 @@ function renderValues(data) {
 			const team = data.standings[index];
 			if (!team) return;
 
+			const points = Number(team.points) || 0;
+			const place =
+				1 +
+				data.standings.filter((otherTeam) => (Number(otherTeam.points) || 0) > points).length;
+
+			setText(`#${row.id} .table-standing`, place);
 			setImage(`#${row.id} .table-icon`, team.image);
 			setText(`#${row.id} .table-short`, team.short);
 			setText(`#${row.id} .table-name`, team.name);
