@@ -23,6 +23,7 @@ const bundledDefaults = {
 		name: "Placeholder",
 		wins: "0",
 		losses: "0",
+		points: "0",
 	})),
 };
 
@@ -107,11 +108,16 @@ function renderValues(data) {
 			setText(`#${row.id} .table-name`, team.name);
 			setText(`#${row.id} .table-winloss-wins`, team.wins);
 			setText(`#${row.id} .table-winloss-losses`, team.losses);
+			setText(`#${row.id} .table-points`, team.points);
 		});
 	}
 }
 
 async function initializePage() {
+	if (window.TEAM_STANDINGS_READY) {
+		await window.TEAM_STANDINGS_READY;
+	}
+
 	let defaults = bundledDefaults;
 	if (window.location.protocol !== "file:") {
 		try {

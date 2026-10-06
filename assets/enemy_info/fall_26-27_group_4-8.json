@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Prismatic Nebula",
+        "abbrev": "PRS",
+        "pic": "https://cdn0.heartbase.gg/league_team_logos/173000/173655.jpg?1791146694",
+        "wins": 1,
+        "losses": 0,
+        "points": 3
+    },
+    {
+        "name": "Reveal Multigaming Academy",
+        "abbrev": "RVA",
+        "pic": "https://cdn0.heartbase.gg/league_team_logos/206000/206689.jpg?1758702605",
+        "wins": 1,
+        "losses": 0,
+        "points": 3
+    },
+    {
+        "name": "Bomba Barbies",
+        "abbrev": "BOB",
+        "pic": "https://cdn0.heartbase.gg/league_team_logos/203000/203816.jpg?1736879493",
+        "wins": 0,
+        "losses": 1,
+        "points": 0
+    },
+    {
+        "name": "Ciabatta Bachata Dancing",
+        "abbrev": "CBD",
+        "pic": "https://cdn0.heartbase.gg/league_team_logos/166000/166731.jpg?1737058780",
+        "wins": 0,
+        "losses": 0,
+        "points": 0
+    },
+    {
+        "name": "Late Night Bootz",
+        "abbrev": "BTZ",
+        "pic": "https://cdn0.heartbase.gg/league_team_logos/196000/196682.jpg?1790098403",
+        "wins": 0,
+        "losses": 0,
+        "points": 0
+    },
+    {
+        "name": "CPLAY",
+        "abbrev": "CPLAY",
+        "pic": "https://cdn0.heartbase.gg/league_team_logos/181000/181739.jpg?1680450958",
+        "wins": 0,
+        "losses": 0,
+        "points": 0
+    },
+    {
+        "name": "Black Lion Unleashed",
+        "abbrev": "BL",
+        "pic": "https://cdn0.heartbase.gg/league_team_logos/109000/109919.jpg?1708267694",
+        "wins": 0,
+        "losses": 1,
+        "points": 0
+    }
+]
